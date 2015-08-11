@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<%= @blog_post.title %>
+	</div>
+	<div class="panel-body">
+		<p>by <%= @blog_post.author %></p>
+		<p><em>Posted at <%= @blog_post.created_at.strftime("@%I:%M%p on %m/%d?%Y") %>
+		</em></p>
+<p>
+	<%= @blog_post.blog_entry %>
+</p>
+</div>
+
+<h4>Make a Comment</h4>
+<p>
+	<%= render 'comments/form' %>
+ 
+</p>
+
+<div>
+	<%= render 'comments/form' %>
+<p>
+	<div>
+    <% @blog_post.comments.each do |comment| %>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <p><%= comment.author %> said...</p>
+                <p><em>Posted at <%= @comment
+                .created_at.strftime("@%I:%M%p on %m/%d?%Y") %>
+                <p><%= comment.comment_entry %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+
+
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+<%= link_to 'Back', blog_posts_path %>
