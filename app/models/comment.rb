@@ -1,3 +1,3 @@
 class Comment < ActiveRecord::Base
-	has many comments
+	belongs_to :blog_post
 end

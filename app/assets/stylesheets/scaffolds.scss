@@ -1,10 +1,14 @@
+
+
+
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #c12;
+  color: #222;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -13,13 +17,13 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: #ccc;
   padding: 10px;
   font-size: 11px;
 }
 
 a {
-  color: #000;
+  color: #bbb;
 
   &:visited {
     color: #666;
@@ -34,6 +38,7 @@ a {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    background-color: #ccc;
   }
 }
 
